@@ -4,25 +4,53 @@
   <meta charset="UTF-8">
   <title>bnz</title>
   <style>
+    body {
+      height: 100vh; /* Set the height of the body to the viewport height */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 20px;
+      opacity: 0; /* Initially hide the columns */
+      transition: opacity 0.8s;
+    }
+
+    .logo {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+      transition: top 0.8s;
+    }
+
     .column {
-      display: none; /* Hide the columns by default */
+      width: 300px;
+      padding: 20px;
+      background-color: lightgray;
     }
   </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>
     $(document).ready(function() {
       $(".logo").click(function() {
-        $(".column").fadeIn("slow"); // Fade in the columns when the logo is clicked
+        $(".logo").css("top", "10%"); // Move the logo to the top
+        $(".container").css("opacity", "1"); // Show the columns
       });
     });
   </script>
 </head>
 <body>
   <div class="container">
-    <div class="logo">
-      <!-- Your logo image goes here -->
-      <img src="logo.png" alt="Logo">
-    </div>
     <div class="column">
       <h2>About Me</h2>
       <!-- Content for About Me column goes here -->
@@ -35,6 +63,10 @@
       <h2>Blog</h2>
       <!-- Content for Blog column goes here -->
     </div>
+  </div>
+  <div class="logo">
+    <!-- Your logo image goes here -->
+    <img src="logo.png" alt="Logo">
   </div>
 </body>
 </html>

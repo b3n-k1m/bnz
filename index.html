@@ -59,14 +59,18 @@
       height: 100px;
       margin-top: -50px;
       margin-left: -50px;
-      border: 2px solid lightblue;
-      border-radius: 50%;
+      border: 1.5px solid lightblue;
+      border-radius: 70%;
       border-top-color: transparent;
-      animation: spin 3s linear infinite;
+      animation: spin 2s linear infinite;
     }
 
     .logo:not(.clicked):hover + .circle-container {
       opacity: 1;
+    }
+
+    .logo.clicked:hover + .circle-container {
+      opacity: 0;
     }
 
     .logo:not(.clicked):hover + .circle-container .circle {

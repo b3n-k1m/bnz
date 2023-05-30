@@ -65,14 +65,6 @@
       animation: spin 2s linear infinite;
     }
 
-    .logo:not(.clicked):hover + .circle-container {
-      opacity: 1;
-    }
-
-    .logo.clicked:hover + .circle-container {
-      opacity: 0;
-    }
-
     .logo:not(.clicked):hover + .circle-container .circle {
       animation-play-state: running;
     }
@@ -105,8 +97,6 @@
           $(".container").css("opacity", "1");
           $(".circle-container").css("opacity", "0"); // Hide the circle when the logo is clicked
         }
-        else
-          $(".circle-container").css("opacity", "0");
       });
 
       $(".logo:not(.clicked)").hover(function() {

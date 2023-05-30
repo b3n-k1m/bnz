@@ -61,13 +61,13 @@
 
     @keyframes spin {
       0% {
-        transform: rotate(0deg) scale(0.5);
+        transform: rotate(0deg) scale(0.3);
       }
       50% {
-        transform: rotate(720deg) scale(1);
+        transform: rotate(720deg) scale(0.6);
       }
       100% {
-        transform: rotate(1440deg) scale(1.5);
+        transform: rotate(1440deg) scale(0.9);
       }
     }
 
@@ -80,16 +80,25 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>
     $(document).ready(function() {
+      var logoClicked = false;
+
       $(".logo").click(function() {
-        $(".logo").css("top", "10%");
-        $(".container").css("opacity", "1");
-        $(".circle-container").css("opacity", "0"); // Hide the circle when the logo is clicked
+        if (!logoClicked) {
+          logoClicked = true;
+          $(".logo").css("top", "10%");
+          $(".container").css("opacity", "1");
+          $(".circle-container").css("opacity", "0"); // Hide the circle when the logo is clicked
+        }
       });
-      
+
       $(".logo").hover(function() {
-        $(".circle-container").css("opacity", "1"); // Show the circle on hover
+        if (!logoClicked) {
+          $(".circle-container").css("opacity", "1"); // Show the circle on hover if logo is not clicked
+        }
       }, function() {
-        $(".circle-container").css("opacity", "0"); // Hide the circle when the hover is removed
+        if (!logoClicked) {
+          $(".circle-container").css("opacity", "0"); // Hide the circle when the hover is removed if logo is not clicked
+        }
       });
     });
   </script>

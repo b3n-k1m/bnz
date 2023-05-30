@@ -56,15 +56,22 @@
       border: 2px solid blue;
       border-radius: 50%;
       border-top-color: transparent;
-      animation: spin 2s linear infinite;
+      animation: spin 2s linear infinite paused;
+    }
+
+    .circle.rotate {
+      animation-play-state: running;
     }
 
     @keyframes spin {
       0% {
         transform: rotate(0deg) scale(0.3);
       }
+      25% {
+        transform: rotate(360deg) scale(0.6);
+      }
       50% {
-        transform: rotate(720deg) scale(0.6);
+        transform: rotate(720deg) scale(0.9);
       }
       100% {
         transform: rotate(1440deg) scale(0.9);
@@ -98,6 +105,12 @@
       }, function() {
         if (!logoClicked) {
           $(".circle-container").css("opacity", "0"); // Hide the circle when the hover is removed if logo is not clicked
+        }
+      });
+
+      $(".circle-container").click(function() {
+        if (!logoClicked) {
+          $(".circle").addClass("rotate"); // Start the rotation animation when the circle is clicked
         }
       });
     });

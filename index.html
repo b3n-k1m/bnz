@@ -34,7 +34,7 @@
       z-index: 1;
     }
 
-    .logo:hover {
+    .logo:not(.clicked):hover {
       transform: translate(-50%, -50%) scale(1.2);
     }
 
@@ -61,9 +61,8 @@
       animation: spin 2s linear infinite paused;
     }
 
-    .logo:hover + .circle-container .circle {
+    .logo:not(.clicked):hover + .circle-container {
       opacity: 1;
-      animation-play-state: running;
     }
 
     @keyframes spin {
@@ -92,6 +91,7 @@
           $(".logo").css("top", "10%");
           $(".container").css("opacity", "1");
           $(".circle-container").css("opacity", "0"); // Hide the circle when the logo is clicked
+          $(".logo").addClass("clicked"); // Add the 'clicked' class to the logo
         }
       });
     });

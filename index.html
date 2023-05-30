@@ -43,6 +43,8 @@
       width: 100px;
       height: 100px;
       z-index: 0;
+      opacity: 0;
+      transition: opacity 0.5s;
     }
 
     .circle {
@@ -54,7 +56,7 @@
       border: 2px solid blue;
       border-radius: 50%;
       border-top-color: transparent;
-      animation: spin 2s linear;
+      animation: spin 2s linear infinite;
     }
 
     @keyframes spin {
@@ -81,6 +83,13 @@
       $(".logo").click(function() {
         $(".logo").css("top", "10%");
         $(".container").css("opacity", "1");
+        $(".circle-container").css("opacity", "0"); // Hide the circle when the logo is clicked
+      });
+      
+      $(".logo").hover(function() {
+        $(".circle-container").css("opacity", "1"); // Show the circle on hover
+      }, function() {
+        $(".circle-container").css("opacity", "0"); // Hide the circle when the hover is removed
       });
     });
   </script>

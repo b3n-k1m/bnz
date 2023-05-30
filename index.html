@@ -59,14 +59,31 @@
       height: 100px;
       margin-top: -50px;
       margin-left: -50px;
-      border: 2px solid blue;
-      border-radius: 50%;
+      border: 1.5px solid lightblue;
+      border-radius: 70%;
       border-top-color: transparent;
       animation: spin 2s linear infinite;
     }
 
-    .logo.clicked + .circle-container {
+    .logo:not(.clicked):hover + .circle-container {
+      opacity: 1;
+    }
+
+    .logo.clicked:hover + .circle-container {
       opacity: 0;
+    }
+
+    .logo:not(.clicked):hover + .circle-container .circle {
+      animation-play-state: running;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(720deg);
+      }
     }
 
     .column {
@@ -86,7 +103,16 @@
           $(".logo").addClass("clicked");
           $(".logo").css("top", "10%");
           $(".container").css("opacity", "1");
+          $(".circle-container").css("opacity", "0"); // Hide the circle when the logo is clicked
         }
+        else
+          $(".circle-container").css("opacity", "0");
+      });
+
+      $(".logo:not(.clicked)").hover(function() {
+        $(".circle-container").css("opacity", "1"); // Show the circle on hover if logo is not clicked
+      }, function() {
+        $(".circle-container").css("opacity", "0"); // Hide the circle when the hover is removed if logo is not clicked
       });
     });
   </script>

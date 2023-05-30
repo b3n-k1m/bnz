@@ -1,27 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>My Website</title>
-    <link href="main.css" rel="stylesheet" type="text/css" />
-  </head>
-  <body>
-    <h1>Desk</h1>
-    <h2>About Me</h2>
-    <p>Hi, I'm Ben</p>
-    <p>Just for fun</p>
-    <h2>My Projects</h2>
-    <ul>
-      <li><a href="link-to-project-1">Project 1</a>: Description of Project 1</li>
-      <li><a href="link-to-project-2">Project 2</a>: Description of Project 2</li>
-      <li><a href="link-to-project-3">Project 3</a>: Description of Project 3</li>
-    </ul>
-    <h2>Blog</h2>
-    <ul>
-      <li><a href="link-to-blog-post-1">Blog Post 1</a>: Brief description of Blog Post 1</li>
-      <li><a href="link-to-blog-post-2">Blog Post 2</a>: Brief description of Blog Post 2</li>
-      <li><a href="link-to-blog-post-3">Blog Post 3</a>: Brief description of Blog Post 3</li>
-    </ul>
-    <h2>Contact me</h2>
-    <p>Email: minhyeokkim0@gmail.com</p>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <title>bnz</title>
+  <style>
+    .column {
+      display: none; /* Hide the columns by default */
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $(".logo").click(function() {
+        $(".column").fadeIn("slow"); // Fade in the columns when the logo is clicked
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <!-- Your logo image goes here -->
+      <img src="logo.png" alt="Logo">
+    </div>
+    <div class="column">
+      <h2>About Me</h2>
+      <!-- Content for About Me column goes here -->
+    </div>
+    <div class="column">
+      <h2>My Projects</h2>
+      <!-- Content for My Projects column goes here -->
+    </div>
+    <div class="column">
+      <h2>Blog</h2>
+      <!-- Content for Blog column goes here -->
+    </div>
+  </div>
+</body>
 </html>

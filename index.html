@@ -30,7 +30,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
       cursor: pointer;
-      transition: all 0.3s;
+      transition: transform 0.3s;
       z-index: 1;
     }
 
@@ -59,22 +59,16 @@
       animation: spin 2s linear infinite paused;
     }
 
-    .circle.rotate {
-      animation-play-state: running;
+    .logo:hover + .circle-container .circle {
+      opacity: 1;
     }
 
     @keyframes spin {
       0% {
-        transform: rotate(0deg) scale(0.3);
-      }
-      25% {
-        transform: rotate(360deg) scale(0.6);
-      }
-      50% {
-        transform: rotate(720deg) scale(0.9);
+        transform: rotate(0deg);
       }
       100% {
-        transform: rotate(1440deg) scale(0.9);
+        transform: rotate(720deg);
       }
     }
 
@@ -95,22 +89,6 @@
           $(".logo").css("top", "10%");
           $(".container").css("opacity", "1");
           $(".circle-container").css("opacity", "0"); // Hide the circle when the logo is clicked
-        }
-      });
-
-      $(".logo").hover(function() {
-        if (!logoClicked) {
-          $(".circle-container").css("opacity", "1"); // Show the circle on hover if logo is not clicked
-        }
-      }, function() {
-        if (!logoClicked) {
-          $(".circle-container").css("opacity", "0"); // Hide the circle when the hover is removed if logo is not clicked
-        }
-      });
-
-      $(".circle-container").click(function() {
-        if (!logoClicked) {
-          $(".circle").addClass("rotate"); // Start the rotation animation when the circle is clicked
         }
       });
     });
@@ -134,9 +112,9 @@
   <div class="logo">
     <!-- Your logo image goes here -->
     <img src="logo.png" alt="Logo">
-    <div class="circle-container">
-      <div class="circle"></div>
-    </div>
+  </div>
+  <div class="circle-container">
+    <div class="circle"></div>
   </div>
 </body>
 </html>

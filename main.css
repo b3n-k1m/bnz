@@ -29,8 +29,8 @@ a {
 a:hover {
   text-decoration: underline;
 }
-.logo img {
-  width: 10px;
+.logo .logos {
+  width: 75px;
   height: auto;
 }
 

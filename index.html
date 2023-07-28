@@ -27,6 +27,8 @@
                 temp2.classList.add('move');
                 const temp3 = document.getElementsByClassName('column3')[0];
                 temp3.classList.add('move');
+                const temp = document.getElementById('intro');
+                temp.classList.add('move');
 
                 window.addEventListener('scroll', handleArrowVisibility);
                 handleArrowVisibility();
@@ -40,6 +42,7 @@
         </script>
 
         <img class="mg" src="logo2.png" id="logo"></div>
+        <h3 id="intro">Welcome to Ben's World!</h3>
         <div class="arrow-wrapper" onclick="scrs()">
             <div class="arrow-container">
                 <div class="arrow"></div>

@@ -4,11 +4,11 @@
     top: calc(50vh - 3em);
     transform: translateX(-50%);
     height: 5em;
-    filter: drop-shadow(0px -0.2em rgba(55, 107, 248, 0.203)) drop-shadow(0px 0px 25px #FFF8);
+    filter: drop-shadow(0px -0.2em rgba(0, 0, 0, 0.203)) drop-shadow(0px 0px 25px #FFF8);
 }
 
 html {
-    background-color: #000000;
+    background-color: #FFFFFF;
     overflow-x: hidden;
     overflow-y: auto;
     font-family: "Helvetica";
@@ -26,13 +26,13 @@ main {
 
 h2 {
     font-size: 2em;
-    color: white;
+    color: black;
 }
 
 p {
     font-family: "Helvetica";
     font-size: 25px;
-    color: white;
+    color: black;
     word-wrap: break-word;
 }
 
@@ -60,20 +60,20 @@ p {
 .column1 {
     width: 350px;
     padding: 30px;
-    background-color: black;
+    background-color: #EBECF0;
     border: 8px solid #98FB98;
 }
 
 .column2 {
     width: 350px;
     padding: 30px;
-    background-color: black;
-    border: 8px solid #E6E6FA;
+    background-color: #EBECF0;
+    border: 8px solid #a2a2f7;
 }
 
 .column3 {
     width: 350px;
     padding: 30px;
-    background-color: black;
+    background-color: #EBECF0;
     border: 8px solid #FFB6C1;
 }

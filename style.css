@@ -118,9 +118,9 @@ p {
 .arrow {
     width: 100%;
     height: 8px;
-    opacity: 0.5;
+    opacity: 0;
     margin: 3px 0;
-    animation: gentleFlash 1.5s infinite;
+    animation: gentleFlash 4s infinite;
 }
 
 .arrow:before {
@@ -137,7 +137,10 @@ p {
     0%, 100% {
         opacity: 0;
     }
+    5%, 95% {
+        opacity: 0;
+    }
     50% {
-        opacity: 1;
+        opacity: 0.15;
     }
 }

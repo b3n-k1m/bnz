@@ -1,3 +1,11 @@
+.blu{
+    color:#4682B4;
+}
+
+.gre{
+    color: #7da97f;
+}
+
 #logo {
     position: absolute;
     left: 50%;

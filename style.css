@@ -4,7 +4,7 @@
     top: calc(50vh - 3em);
     transform: translateX(-50%);
     height: 5em;
-    filter: drop-shadow(0px -0.2em rgba(0, 0, 0, 0.203)) drop-shadow(0px 0px 25px #FFF8);
+    filter: drop-shadow(0px -0.2em rgba(0, 0, 0, 0.203)) drop-shadow(0px 0px 25px #0080ff);
 }
 
 html {
@@ -41,9 +41,9 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-grow: 1; /* Allow the main container to take up all available space */
+    flex-grow: 1;
     width: 100%;
-    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+    overflow-y: auto;
 }
 
 .container {

@@ -7,7 +7,7 @@
     filter: drop-shadow(0px -0.2em #00000036) drop-shadow(0px 0px 25px #0080ff);
 }
 
-#tetris {
+#tetris, #DScert {
     max-width: 100%;
     filter: drop-shadow(0px -0.2em #00000036) drop-shadow(0px 0px 25px #b9f8c7);
     border: 10px #000000;

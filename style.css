@@ -9,9 +9,16 @@
 
 #tetris, #DScert {
     max-width: 100%;
-    filter: drop-shadow(0px -0.2em #00000036) drop-shadow(0px 0px 25px #b9f8c7);
-    border: 10px #000000;
-    border-radius: 5px;
+    border: 3px solid #000000;
+    border-radius: 10px;
+}
+
+#tetris {
+    filter: drop-shadow(0px 0px 25px #b9f8c7);
+}
+
+#DScert {
+    filter: drop-shadow(0px 0px 25px #9ca0ef);
 }
 
 html {
@@ -73,6 +80,7 @@ p, li {
     transform: translateY(50px);
     transition: transform 1.5s, opacity 1.5s;
 }
+
 .column1.move {
     opacity: 1;
     transform: translateY(0);

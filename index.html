@@ -7,10 +7,6 @@
     </head>
     <body>
         <script>
-            function scrollToBottom() {
-                window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-            }
-
             window.onload = function() {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             };
@@ -36,10 +32,15 @@
                 handleArrowVisibility();
             }
             window.addEventListener('load', startup);
+
+            function scrs() {
+                const targetPosition = Math.round(window.innerHeight * 0.8);
+                window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+            }
         </script>
 
         <img class="mg" src="logo2.png" id="logo"></div>
-        <div class="arrow-wrapper" onclick="scrollToBottom()">
+        <div class="arrow-wrapper" onclick="scrs()">
             <div class="arrow-container">
                 <div class="arrow"></div>
                 <div class="arrow"></div>

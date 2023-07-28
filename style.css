@@ -4,7 +4,7 @@
     top: calc(50vh - 3em);
     transform: translateX(-50%);
     height: 5em;
-    filter: drop-shadow(0px -0.2em rgba(0, 0, 0, 0.203)) drop-shadow(0px 0px 25px #0080ff);
+    filter: drop-shadow(0px -0.2em #00000036) drop-shadow(0px 0px 25px #0080ff);
 }
 
 html {
@@ -48,7 +48,7 @@ p {
 
 .container {
     position: absolute;
-    top: 60%;
+    top: 85%;
     left: 0;
     right: 0;
     display: flex;

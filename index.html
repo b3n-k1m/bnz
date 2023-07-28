@@ -1,57 +1,11 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>bnz</title>
-  <link href="style.css" rel="stylesheet" type="text/css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script>
-    $(document).ready(function() {
-      var logoClicked = false;
-
-      $(".logo").click(function() {
-        if (!logoClicked) {
-          logoClicked = true;
-          $(".logo").addClass("clicked");
-          $(".logo").css("top", "10%");
-          $(".container").css("opacity", "1");
-          $(".circle-container").css("opacity", "0"); // Hide the circle when the logo is clicked
-        }
-      });
-
-      $(".logo").hover(function() {
-        if(!logoClicked) {
-          $(".circle-container").css("opacity", "1"); // Show the circle on hover if logo is not clicked
-        }
-        else {
-          $(".circle-container").css("opacity", "0"); // Hide the circle when the hover is removed if logo is not clicked
-        }
-      }, function() {
-        $(".circle-container").css("opacity", "0"); // when the mouse leaves
-      });
-    });
-  </script>
-</head>
-<body>
-  <div class="container">
-    <div class="column">
-      <h2>About Me</h2>
-      <!-- Content for About Me column goes here -->
-    </div>
-    <div class="column">
-      <h2>My Projects</h2>
-      <!-- Content for My Projects column goes here -->
-    </div>
-    <div class="column">
-      <h2>Blog</h2>
-      <!-- Content for Blog column goes here -->
-    </div>
-  </div>
-  <div class="logo">
-    <img src="logo2.png"/>
-  </div>
-  <div class="circle-container">
-    <div class="circle"></div>
-  </div>
-</body>
+<html lang="en">
+    <head>
+        <title>bnz</title>
+    </head>
+    <body>
+        <h1>about me</h1>
+        <h1>my projects</h1>
+        <h1>blog</h1>
+    </body>
 </html>

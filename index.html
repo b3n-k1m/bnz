@@ -7,6 +7,23 @@
     </head>
     <body>
         <script>
+            function scrollToBottom() {
+                window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+            }
+
+            window.onload = function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            };
+
+            function handleArrowVisibility() {
+                const arrowWrapper = document.querySelector('.arrow-wrapper');
+                if (window.scrollY > 100) {
+                    arrowWrapper.style.display = 'none';
+                } else {
+                    arrowWrapper.style.display = 'block';
+                }
+            }
+
             function startup() {
                 const temp1 = document.getElementsByClassName('column1')[0];
                 temp1.classList.add('move');
@@ -14,11 +31,20 @@
                 temp2.classList.add('move');
                 const temp3 = document.getElementsByClassName('column3')[0];
                 temp3.classList.add('move');
+
+                window.addEventListener('scroll', handleArrowVisibility);
+                handleArrowVisibility();
             }
             window.addEventListener('load', startup);
         </script>
 
         <img class="mg" src="logo2.png" id="logo"></div>
+        <div class="arrow-wrapper" onclick="scrollToBottom()">
+            <div class="arrow-container">
+                <div class="arrow"></div>
+                <div class="arrow"></div>
+            </div>
+        </div>
         <main>
         <div class="container">
             <div class="column1">

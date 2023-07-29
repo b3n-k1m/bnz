@@ -6,6 +6,10 @@
     color: #7da97f;
 }
 
+.pur{
+    color: #9ca0ef
+}
+
 #logo {
     position: absolute;
     left: 50%;
@@ -44,6 +48,15 @@ main {
     align-items: center;
     min-height: 100vh;
     margin: 0;
+}
+
+hr {
+    position: absolute;
+    background-color: black;
+    top: 51%;
+    height: 5px;
+    width: 45%;
+    color: #000000;
 }
 
 h2 {

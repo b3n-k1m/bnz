@@ -59,6 +59,17 @@ main {
     margin: 0;
 }
 
+footer {
+    background-color: #cde8e8;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: -800px;
+    width: 100%;
+}
+
+
 hr {
     position: absolute;
     background-color: #1E2F97;
